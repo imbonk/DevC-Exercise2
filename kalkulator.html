@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Exercise 2</title>
+</head>
+<body>
+    <center>
+        <h1>Kalkulator</h1>
+    </center>
+    <input type="text" id="AngkaPertama">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="x">*</option>
+        <option value="/">/</option>
+    </select>
+    <input type="text" id="AngkaKedua">
+    <input type="submit" onclick="kalkulator()" value="=">
+    <input type="text" id="hasil">
+</body>
+<script language="javascript" type="text/javascript">
+    function kalkulator() {
+        var AngkaPertama = parseInt(document.getElementById("AngkaPertama").value);
+        var AngkaKedua = parseInt(document.getElementById("AngkaKedua").value);
+        var op = document.getElementById("hasil");
+        var total;
+        if (isNaN(AngkaPertama) | isNaN(AngkaKedua)) {
+            alert("isi form dengan angka!!!!") 
+        } else {
+            if (op == "+") {
+                total = AngkaPertama + AngkaKedua;
+            } else if (op == "-") {
+                total = AngkaPertama - AngkaKedua;
+            } else if (op == "x") {
+                total = AngkaPertama * AngkaKedua;
+            } else {
+                total = AngkaPertama / AngkaKedua;
+            }
+        }
+        hasil.value = total;
+    }
+</script>
+</html>
